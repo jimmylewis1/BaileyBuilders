@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="bailey">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bailey Builders Inc.</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+    <title></title>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="header">
+            <img class="logo" src="Images/logo%20copy.png" />
+            
+    
+            <div class="navBar">
+       
+                <div class="menu">
+                    <a ui-sref="about"> About </a> <span class="pipe">|</span>
+                    <a ui-sref="services"> Services </a> <span class="pipe">|</span>
+                    <a ui-sref="projects"> Projects </a> <span class="pipe">|</span>
+                    <a ui-sref="contact"> Contact </a> 
+                </div>
+        
+            </div>
+            
+            
+            <div ng-controller="homeCtrl">
+                
+                <div ui-view class="main-view">
+                    <p>{{test}}</p>
+                </div>
+                
+            </div>
+            
+            <div class="footer">
+                
+                <div class="copyRight">
+                    <span class="cr">© 2015 Bailey Builders, Inc.</span>
+                </div>
+                
+                <div class="socIcons">
+                    
+                     <a target="_blank" href="https://www.facebook.com/baileybuilders/?fref=ts">
+                         <img class ="s fbLogo" src="Images/icon-facebook.png" />    
+                     </a>
+
+                     <a target="_blank" href="http://www.twitter.com">
+                        <img class="s twitLogo" src="Images/icon-twitter.png" />
+                     </a>
+
+                     <a target="_blank" href="http://www.instagram.com">
+                        <img class="s instaLogo" src="Images/icon-instagram.png" />
+                     </a>
+
+                     <a target="_blank" href="http://plus.google.com">
+                        <img class="s googLogo" src="Images/new-gplus-icon.png" />
+                     </a>
+                    
+                </div>
+            
+            </div>
+	     
+        </div>
+    </div>
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/home/homeCtrl.js"></script>
+    <script src="/js/contact/contactsCtrl.js"></script>
+    <script src="/js/projects/projectsCtrl.js"></script>
+    <script src="/js/services/servicesCtrl.js"></script>
+</body>
+</html>
