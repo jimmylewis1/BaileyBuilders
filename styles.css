@@ -13,7 +13,7 @@ body {
     background-color: white;
     opacity: 0.6;
     z-index: 2;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 .logo {
@@ -90,9 +90,9 @@ ul li {
 
 .main-view {
     background-color: white;
-    opacity: 0.6;
+    opacity: 0.9;
     width: 80%;
-    border-radius: 4px;
+    border-radius: 3px;
     max-height: 300px;
 }
 
