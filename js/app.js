@@ -22,7 +22,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('projects', {
             url: '/projects',
-            tempalteUrl: 'js/projects/projectsTmpl.html',
+            templateUrl: 'js/projects/projectsTmpl.html',
             //controller: 'projectsCtrl'
         })
         .state('contact', {

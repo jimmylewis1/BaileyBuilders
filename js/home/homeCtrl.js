@@ -1,6 +1,6 @@
 var app=angular.module('bailey');
     
 app.controller('homeCtrl', function($scope){
-    $scope.test = "Boom."; 
+    $scope.test = "This is the home page."; 
     
 });
