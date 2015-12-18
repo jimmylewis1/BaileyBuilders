@@ -1,6 +1,98 @@
+
+
 <div class="page">
 
-    <h1>Projects Page</h1>
-        <p>This is where project info will be found.</p>
+    <!-- JJ -->
+    <div class="slideshow">
+      <div class="slide active">
+        <img src="http://s.cdpn.io/6234/railcars.jpg" alt="" class="horizontal" />
+      </div>
+        
+      <div class="slide">
+        <img src="http://s.cdpn.io/6234/old-man.jpg" alt="" class="vertical" />
+      </div>
+        
+      <div class="slide">
+        <img src="http://s.cdpn.io/6234/girl.jpg" alt="" class="horizontal" />
+      </div>
+        
+      <div class="slide last">
+        <img src="http://s.cdpn.io/6234/dandelion.jpg" alt=""  class="vertical" />
+      </div>
+        
+      <div class="overlay overlay-shadow"></div>
+      <div class="overlay overlay-highlight"></div>
+    </div>
+    
+    <div class="slideshow-effects">
+
+    </div>
+    <div class="slideshow-nav">
+      <a href="#" class="nav-link previous"><em class="icon-chevron-sign-left icon-2x"></em></a>
+      <a href="#" class="nav-link next"><em class="icon-chevron-sign-right icon-2x"></em></a>
+    </div>
+    <!-- SDG -->
+    
+<script type="text/javascript">
+
+    
+$(document).ready(function(){
+  var $prev = $('.previous');
+  var $next = $('.next');
+  var mode = "auto";
+  $prev.on({
+    click: function(e){
+      e.preventDefault();
+      mode = "manual";
+      showPreviousImage();
+    }
+  });
+    
+  $next.on({
+    click: function(e){
+      e.preventDefault();
+      mode = "manual";
+      showNextImage();
+      
+    }
+  });
+  
+  setInterval(function(){
+    if(mode==="auto"){
+      showNextImage();
+    }
+  },3000);
+  
+  function showNextImage(){
+      var $actEl = $('.active');
+      var $nextEl = $actEl.next('.slide');
+      
+      if($nextEl.length){
+        $actEl.removeClass('active');
+        $nextEl.addClass('active');
+      }
+      else{
+        $actEl.removeClass('active');
+        $('.slide:first-child').addClass('active');
+      }
+  }
+  
+  function showPreviousImage(){
+      var $actEl = $('.active');
+      var $prevEl = $actEl.prev('.slide');
+      
+      if($prevEl.length){
+        $actEl.removeClass('active');
+        $prevEl.addClass('active');
+      }
+      else{
+        $actEl.removeClass('active');
+        $('.slide.last').addClass('active');
+      }
+  }
+});
+        
+</script>
+
     
 </div>
