@@ -76,6 +76,7 @@ a {
     
 }
 
+/*
 ul li:hover{
     background-color: white;
     display: block;
@@ -89,6 +90,7 @@ ul li {
     padding-left: 15px;
     position: absolute;
 }
+*/
 
 .main-view {
     background-color: #fff;
@@ -167,59 +169,66 @@ ul li {
 }
 
 .house-pic {
-    border-radius: 3px;
-    padding-left: 40px;
+    border-radius: 3px;     
+    margin-left: 70px;
+    margin-top: 45px;
 }
 
 .page .contact-head {
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .contact-info {
     font-family: sans-serif;
     font-weight: 500;
     float: right;
-    padding: 18px 110px;
+    padding: 50px 130px;
 }
 
+/*SERVICES*/
+
 .commercial {
-    height: 500px;
-    width: 500px;
+    float: left;
     margin: 0;
     padding-left: 50px;
 }
 
-.commercial h3 {
-    padding-left: 92px;
-}
-
-.commercial img {
-    padding-bottom: 20px;
+.uvsc, .res-home {
+    border-radius: 3px;
 }
 
 .residential {
     float: right;
-    height: 500px;
-    width: 500px;
     padding-left: 5px;
     padding-right: 50px;
 }
 
-.residential h3 {
-    padding-left: 98px;
+.services-ul {
+    list-style-type: none;
 }
 
-.residential img {
-    padding-bottom: 20px;
-}
-
-li {
+.list {
+    margin-top: 10px;
     font-family: sans-serif;
     font-size: 16px;
 }
 
-/*SLIDESHOW*/
+.fa {
+    padding-right: 5px;
+}
 
+/*PROJECTS*/
+
+.projectsh1 {
+    padding-left: 25px;
+}
+
+.projects-desc {
+    float: right;
+    margin-top: 100px;
+}
+
+/*SLIDESHOW*/
 
 
 @baseBg: #ececec;
@@ -237,7 +246,8 @@ a{
 }
 
 .slideshow{
-  padding-top: 70px;
+  float: left;
+  padding-top: 25px;
   padding-left: 25px;
   position: relative;
 /*
