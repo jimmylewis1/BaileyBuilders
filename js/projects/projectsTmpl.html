@@ -2,111 +2,111 @@
     
     <h1 class="projectsh1">Projects</h1>
 
+  <div class="projects-content">
     <!-- Slide Deck -->
     <div class="slideshow">
       <div class="slide active">
         <img src="images/house-ss1.jpg" alt="" class="horizontal" />
       </div>
         
-      <div class="slide">
-        <img src="images/house-ss5.jpg" alt="" class="horizontal" />
-      </div>
-        
-      <div class="slide">
-        <img src="images/house-ss2.jpg" alt="" class="horizontal" />
-      </div>
-        
-      <div class="slide last">
-        <img src="images/house-ss4.png" alt=""  class="horizontal" />
-      </div>
-        
+    <div class="slide">
+      <img src="images/house-ss5.jpg" alt="" class="horizontal" />
     </div>
+        
+    <div class="slide">
+      <img src="images/house-ss2.jpg" alt="" class="horizontal" />
+    </div>
+        
+    <div class="slide last">
+      <img src="images/house-ss4.png" alt=""  class="horizontal" />
+    </div>
+        
+  </div>
     
-    <div class="slideshow-effects">
+  <div class="slideshow-effects">
 
-    </div>
+  </div>
 <!--
     <div class="slideshow-nav">
       <a href="#" class="nav-link previous"><em class="icon-chevron-sign-left icon-2x"></em></a>
       <a href="#" class="nav-link next"><em class="icon-chevron-sign-right icon-2x"></em></a>
     </div>
 -->
-    <div class="projects-desc">
-        <p>The phrase "commitment to excellence" is not just motivational philosophy<br> 
-        for Bailey Builders, it's their mission statement - their guarantee.</p>
-        
-        <p>Driven by the desire to build beautiful, personal homes, Bailey Builders <br>
-        makes every effort to provide their customers with an incredibly individual<br> 
-        experience.</p>
-        
-        <p>For Bailey Builders, craftsmanship is key. The quality of their products<br>
-        is indicative of their mission to build remarkably beautiful homes and<br>
-        commercial real estate.</p>
-    
-    </div>
+  <div class="projects-desc">
+    <span>The phrase "commitment to excellence" is not just motivational philosophy for Bailey Builders, it's their mission statement - their guarantee.
+
+      Driven by the desire to build beautiful, personal homes, Bailey Builders makes every effort to provide their customers with an incredibly individual<br>
+      experience.
+
+      For Bailey Builders, craftsmanship is key. The quality of their products<br>
+      is indicative of their mission to build remarkably beautiful homes and<br>
+      commercial real estate.
+    </span>
+
+  </div>
     
     <!-- SDG -->
     
-<script type="text/javascript">
+  <script type="text/javascript">
 
-    
-$(document).ready(function(){
-  var $prev = $('.previous');
-  var $next = $('.next');
-  var mode = "auto";
-  $prev.on({
-    click: function(e){
-      e.preventDefault();
-      mode = "manual";
-      showPreviousImage();
+
+  $(document).ready(function(){
+    var $prev = $('.previous');
+    var $next = $('.next');
+    var mode = "auto";
+    $prev.on({
+      click: function(e){
+        e.preventDefault();
+        mode = "manual";
+        showPreviousImage();
+      }
+    });
+
+    $next.on({
+      click: function(e){
+        e.preventDefault();
+        mode = "manual";
+        showNextImage();
+
+      }
+    });
+
+    setInterval(function(){
+      if(mode==="auto"){
+        showNextImage();
+      }
+    },4000);
+
+    function showNextImage(){
+        var $actEl = $('.active');
+        var $nextEl = $actEl.next('.slide');
+
+        if($nextEl.length){
+          $actEl.removeClass('active');
+          $nextEl.addClass('active');
+        }
+        else{
+          $actEl.removeClass('active');
+          $('.slide:first-child').addClass('active');
+        }
+    }
+
+    function showPreviousImage(){
+        var $actEl = $('.active');
+        var $prevEl = $actEl.prev('.slide');
+
+        if($prevEl.length){
+          $actEl.removeClass('active');
+          $prevEl.addClass('active');
+        }
+        else{
+          $actEl.removeClass('active');
+          $('.slide.last').addClass('active');
+        }
     }
   });
-    
-  $next.on({
-    click: function(e){
-      e.preventDefault();
-      mode = "manual";
-      showNextImage();
-      
-    }
-  });
-  
-  setInterval(function(){
-    if(mode==="auto"){
-      showNextImage();
-    }
-  },4000);
-  
-  function showNextImage(){
-      var $actEl = $('.active');
-      var $nextEl = $actEl.next('.slide');
-      
-      if($nextEl.length){
-        $actEl.removeClass('active');
-        $nextEl.addClass('active');
-      }
-      else{
-        $actEl.removeClass('active');
-        $('.slide:first-child').addClass('active');
-      }
-  }
-  
-  function showPreviousImage(){
-      var $actEl = $('.active');
-      var $prevEl = $actEl.prev('.slide');
-      
-      if($prevEl.length){
-        $actEl.removeClass('active');
-        $prevEl.addClass('active');
-      }
-      else{
-        $actEl.removeClass('active');
-        $('.slide.last').addClass('active');
-      }
-  }
-});
-        
-</script>
 
+  </script>
+  </div>
     
 </div>

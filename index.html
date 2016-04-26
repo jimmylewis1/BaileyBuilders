@@ -10,73 +10,60 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	  <link rel="stylesheet" type="text/css" href="styles.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
     <title></title>
 </head>
 
 <body>
-        
-        <div class="top-header">
-           <a ui-sref="home"> 
-             <img class="logo" src="Images/logo%20copy.png" />
-           </a>
-    
-            <!-- Nav Menu -->
-            <ul class="nav navbar-nav navbar-right"><li><a ui-sref="about">About</a></li>
-            <ul class="nav navbar-nav navbar-right"><li><a ui-sref="services">Services</a></li>
-            <ul class="nav navbar-nav navbar-right"><li><a ui-sref="projects">Projects</a></li>
-            <ul class="nav navbar-nav navbar-right"><li><a ui-sref="contact">Contact</a></li>
-                
-            
+        <img class="background-image" src="Images/homeWithLawn.jpg">
+        <div class="content">
+          <div class="top-header">
+             <a ui-sref="home">
+               <img class="logo" src="Images/logo%20copy.png" />
+             </a>
+              <!-- Nav Menu -->
+            <div class="nav">
+              <ul class="navbar-right">
+                <li><a ui-sref="about">About</a></li>
+                <li><a ui-sref="services">Services</a></li>
+                <li><a ui-sref="projects">Projects</a></li>
+                <li><a ui-sref="contact">Contact</a></li>
+              </ul>
+            </div>
+           </div>
 
-         </div>                 
-
-                
-                    
+              <!--Main View-->
             <div ng-controller="homeCtrl">
-                
-                <div ui-view class="view">
-                
+              <div ui-view class="view">
                 <div class="main-view" ng-show="$state.current.name === 'home'">
-                
                     <p></p>
-                    
-                </div> 
-                    
                 </div>
-                
+              </div>
             </div>
             
-            <div class="footer">
+            <div class="footer" ng-controller="homeCtrl">
+              <div class="copyRight">
+                <span class="cr">© {{date | date:'yyyy'}} Bailey Builders, Inc.</span>
+              </div>
                 
-                <div class="copyRight">
-                    <span class="cr">© 2015 Bailey Builders, Inc.</span>
-                </div>
-                
-                <div class="socIcons">
-                    
-                     <a target="_blank" href="https://www.facebook.com/baileybuilders/?fref=ts">
-                         <img class ="s fbLogo" src="Images/icon-facebook.png" />    
-                     </a>
+              <div class="socIcons">
+                 <a target="_blank" href="https://www.facebook.com/baileybuilders/?fref=ts">
+                   <img class ="s fbLogo" src="Images/icon-facebook.png" />
+                 </a>
+                 <a target="_blank" href="http://www.twitter.com">
+                   <img class="s twitLogo" src="Images/icon-twitter.png" />
+                 </a>
+                 <a target="_blank" href="http://www.instagram.com">
+                   <img class="s instaLogo" src="Images/icon-instagram.png" />
+                 </a>
 
-                     <a target="_blank" href="http://www.twitter.com">
-                        <img class="s twitLogo" src="Images/icon-twitter.png" />
-                     </a>
-
-                     <a target="_blank" href="http://www.instagram.com">
-                        <img class="s instaLogo" src="Images/icon-instagram.png" />
-                     </a>
-
-                     <a target="_blank" href="http://plus.google.com">
-                        <img class="s googLogo" src="Images/new-gplus-icon.png" />
-                     </a>
-                    
-                </div>
-            
+                 <a target="_blank" href="http://plus.google.com">
+                   <img class="s googLogo" src="Images/new-gplus-icon.png" />
+                 </a>
+              </div>
             </div>
-	     
-    
+          </div>
     
     
     

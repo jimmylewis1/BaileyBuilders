@@ -1,21 +1,34 @@
 body {
-    width: 100%;
-    height: 100%;
-    background-image: url("images/background-main.jpg");
-    background-size: cover;  
-    background-repeat: no-repeat;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: url("Images/homeWithLawn.jpg") 50% 50% no-repeat;*/
+    /*background-size: cover;  */
+    /*background-repeat: no-repeat;*/
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
 }
 
 .top-header {
     height: 50px;
     width: 98.5%;
-    background-color: white;
+    /*background-color: white;*/
     opacity: 0.6;
     z-index: 2;
     border-radius: 3px;
     margin-top: 1px;
     margin-left: 10px;
-    
 }
 
 .logo {
@@ -25,7 +38,24 @@ body {
 }
 
 .nav {
-    padding-right: 20px;
+  display: inline-flex;
+  float: right;
+  padding-right: 35px;
+}
+
+.navbar-right {
+  margin: 0;
+}
+
+.nav ul li {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.nav li a {
+  color: #fff;
+  font-size: 16px;
 }
 
 .compName {
@@ -34,7 +64,7 @@ body {
     font-size: 24px;
     font-weight: 100;
     padding-top: 1.5%;
-    padding-left 1.5%;
+    padding-left: 1.5%;
 }
 
 
@@ -142,7 +172,7 @@ ul li {
 .page {
     height: 500px;
     width: 950px;
-    margin: 50px auto;
+    margin: 120px auto;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     box-sizing: border-box;
@@ -159,7 +189,7 @@ ul li {
     max-width: 460px;
     text-align: justify;
     float: right;
-    padding-top: 123px;
+    padding-top: 100px;
     padding-left: 5px;
 }
 
@@ -168,21 +198,8 @@ ul li {
     font-weight: 300;
 }
 
-.house-pic {
-    border-radius: 3px;     
-    margin-left: 70px;
-    margin-top: 45px;
-}
-
-.page .contact-head {
-    padding-left: 70px;
-}
-
-.contact-info {
-    font-family: sans-serif;
-    font-weight: 500;
-    float: right;
-    padding: 50px 130px;
+.page span {
+  font-size: 16px;
 }
 
 /*SERVICES*/
@@ -195,12 +212,17 @@ ul li {
 
 .uvsc, .res-home {
     border-radius: 3px;
+  margin-bottom: 10px;
 }
 
 .residential {
     float: right;
     padding-left: 5px;
     padding-right: 50px;
+}
+
+.commercial, .residential {
+  margin-top: -10px;
 }
 
 .services-ul {
@@ -221,6 +243,12 @@ ul li {
 
 .projectsh1 {
     padding-left: 25px;
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .projects-desc {
@@ -324,4 +352,35 @@ a{
 .next{
   float: right;
 }
+
+/*CONTACT US*/
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.house-pic {
+  height: 300px;
+  width: auto;
+  border-radius: 6px;
+  margin-left: 70px;
+  margin-top: 45px;
+}
+
+.page .contact-head {
+  padding-left: 70px;
+}
+
+.contact-info {
+  font-family: sans-serif;
+  font-weight: 500;
+  float: right;
+  padding: 50px 130px;
+}
+
+.company, .phone, .fax {
+  font-size: 14px;
+  font-weight: 600;
+}
+
 
