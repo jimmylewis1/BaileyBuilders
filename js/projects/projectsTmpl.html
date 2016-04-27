@@ -8,76 +8,73 @@
       <div class="slide active">
         <img src="images/house-ss1.jpg" alt="" class="horizontal" />
       </div>
-        
-    <div class="slide">
-      <img src="images/house-ss5.jpg" alt="" class="horizontal" />
+      <div class="slide">
+        <img src="images/house-ss5.jpg" alt="" class="horizontal" />
+      </div>
+      <div class="slide">
+        <img src="images/house-ss2.jpg" alt="" class="horizontal" />
+      </div>
+      <div class="slide last">
+        <img src="images/house-ss4.png" alt=""  class="horizontal" />
+      </div>
     </div>
-        
-    <div class="slide">
-      <img src="images/house-ss2.jpg" alt="" class="horizontal" />
-    </div>
-        
-    <div class="slide last">
-      <img src="images/house-ss4.png" alt=""  class="horizontal" />
-    </div>
-        
-  </div>
     
-  <div class="slideshow-effects">
-
-  </div>
+    <!--<div class="slideshow-effects"></div>-->
 <!--
     <div class="slideshow-nav">
       <a href="#" class="nav-link previous"><em class="icon-chevron-sign-left icon-2x"></em></a>
       <a href="#" class="nav-link next"><em class="icon-chevron-sign-right icon-2x"></em></a>
     </div>
 -->
-  <div class="projects-desc">
-    <span>The phrase "commitment to excellence" is not just motivational philosophy for Bailey Builders, it's their mission statement - their guarantee.
 
-      Driven by the desire to build beautiful, personal homes, Bailey Builders makes every effort to provide their customers with an incredibly individual<br>
-      experience.
-
-      For Bailey Builders, craftsmanship is key. The quality of their products<br>
-      is indicative of their mission to build remarkably beautiful homes and<br>
-      commercial real estate.
-    </span>
-
-  </div>
-    
     <!-- SDG -->
     
+
+    <div class="projects-desc">
+      <span>The phrase "commitment to excellence" is not just motivational philosophy
+        for Bailey Builders, it's their mission statement - their guarantee.
+
+        Driven by the desire to build beautiful, personal homes, Bailey Builders
+        makes every effort to provide their customers with an incredibly individual
+        experience.<br>
+        <br>
+        For Bailey Builders, craftsmanship is key. The quality of their products
+        is indicative of their mission to build remarkably beautiful homes and
+        commercial real estate.
+      </span>
+    </div>
+  </div><!--END PROJECTS CONTENT-->
   <script type="text/javascript">
 
 
-  $(document).ready(function(){
-    var $prev = $('.previous');
-    var $next = $('.next');
-    var mode = "auto";
-    $prev.on({
-      click: function(e){
-        e.preventDefault();
-        mode = "manual";
-        showPreviousImage();
-      }
-    });
+    $(document).ready(function(){
+      var $prev = $('.previous');
+      var $next = $('.next');
+      var mode = "auto";
+      $prev.on({
+        click: function(e){
+          e.preventDefault();
+          mode = "manual";
+          showPreviousImage();
+        }
+      });
 
-    $next.on({
-      click: function(e){
-        e.preventDefault();
-        mode = "manual";
-        showNextImage();
+      $next.on({
+        click: function(e){
+          e.preventDefault();
+          mode = "manual";
+          showNextImage();
 
-      }
-    });
+        }
+      });
 
-    setInterval(function(){
-      if(mode==="auto"){
-        showNextImage();
-      }
-    },4000);
+      setInterval(function(){
+        if(mode==="auto"){
+          showNextImage();
+        }
+      },4000);
 
-    function showNextImage(){
+      function showNextImage(){
         var $actEl = $('.active');
         var $nextEl = $actEl.next('.slide');
 
@@ -89,9 +86,9 @@
           $actEl.removeClass('active');
           $('.slide:first-child').addClass('active');
         }
-    }
+      }
 
-    function showPreviousImage(){
+      function showPreviousImage(){
         var $actEl = $('.active');
         var $prevEl = $actEl.prev('.slide');
 
@@ -103,10 +100,8 @@
           $actEl.removeClass('active');
           $('.slide.last').addClass('active');
         }
-    }
-  });
+      }
+    });
 
   </script>
-  </div>
-    
-</div>
+</div> <!--END PAGE-->

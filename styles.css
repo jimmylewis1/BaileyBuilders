@@ -172,7 +172,7 @@ ul li {
 .page {
     height: 500px;
     width: 950px;
-    margin: 120px auto;
+    margin: 65px auto;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     box-sizing: border-box;
@@ -249,11 +249,13 @@ ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: -20px;
 }
 
 .projects-desc {
     float: right;
-    margin-top: 100px;
+    margin-top: 85px;
+    width: 800px;
 }
 
 /*SLIDESHOW*/
@@ -278,10 +280,7 @@ a{
   padding-top: 25px;
   padding-left: 25px;
   position: relative;
-/*
-  width: 300px;
-  height: 300px;
-*/
+  width: 800px;
   margin: 20px auto 0px auto;
   text-align: center;
 }
